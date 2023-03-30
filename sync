@@ -31,13 +31,14 @@ git clone --depth=1 https://ImSpiDy:$my_og_token@github.com/ImSpiDy/kernel_xiaom
 git clone --depth=1 https://github.com/LineageOS/android_hardware_lineage_livedisplay hardware/lineage/livedisplay -b lineage-17.1
 git clone --depth=1 https://github.com/Nub-XD/android_packages_apps_Dirac packages/apps/Dirac -b 10
 #git clone --depth=1 https://github.com/Nub-XD/platform_vendor_lawnchair vendor/lawnchair -b 10
-git clone --depth=1 https://gitlab.com/Project-Nexus/nexus-clang.git /tmp/rom/prebuilts/clang/host/linux-x86/clang-nexus -b nexus-14
+git clone --depth=1 https://gitlab.com/Project-Nexus/nexus-clang.git /tmp/rom/prebuilts/clang/host/linux-x86/nexus-clang -b nexus-14
 
 # hals
-rm -rf hardware/qcom/msm8998/audio hardware/qcom/msm8998/media hardware/qcom/msm8999/display
+rm -rf hardware/qcom/msm8998/audio hardware/qcom/msm8998/media hardware/qcom/msm8999/display vendor/reloaded
 git clone --depth=1 https://github.com/Nub-XD/android_hardware_qcom_audio hardware/qcom/msm8998/audio -b Q
 git clone --depth=1 https://github.com/Nub-XD/android_hardware_qcom_display hardware/qcom/msm8998/display -b Q
 git clone --depth=1 https://github.com/Nub-XD/android_hardware_qcom_media hardware/qcom/msm8998/media -b Q
+git clone --depth=1 https://github.com/Nub-XD/android_vendor_reloaded vendor/reloaded -b q
 
 # re clone
 #rm -rf /tmp/rom/frameworks/base /tmp/rom/vendor/lineage /tmp/rom/bionic
