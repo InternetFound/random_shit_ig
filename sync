@@ -28,6 +28,10 @@ git clone --depth=1 https://Prashant-1695:$my_og_token@github.com/Prashant-1695/
 git clone --depth=1 https://github.com/projects-nexus/nexus_kernel_xiaomi_lavender kernel/xiaomi/lavender -b qti
 
 rm -rf frameworks/base && git clone -b thirteen --depth=1 https://github.com/Prashant-1695/android_frameworks_base frameworks/base
+rm -rf hardware/qcom-caf/msm8998/display hardware/qcom-caf/msm8998/audio hardware/qcom-caf/msm8998/media
+git clone -b arrow-13.1-caf-msm8998 https://github.com/ArrowOS/android_hardware_qcom_display hardware/qcom-caf/msm8998/display
+git clone -b arrow-13.1-caf-msm8998 https://github.com/ArrowOS/android_hardware_qcom_audio hardware/qcom-caf/msm8998/audio
+git clone -b arrow-13.1-caf-msm8998 https://github.com/ArrowOS/android_hardware_qcom_media hardware/qcom-caf/msm8998/media
 
 # patch
 #cd /tmp/rom/system/libhidl && curl https://github.com/ArrowOS/android_system_libhidl/commit/fbdf10a33f546d202ae12b4b864177fea9faa998.patch | git am
