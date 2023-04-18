@@ -1,11 +1,12 @@
 # Normal build steps
-. build/envsetup.sh
-lunch derp_lavender-userdebug
+source build/envsetup.sh
+lunch aospa_phone1-userdebug
 
 # export variable here
-export TZ=Asia/Kolkata
-export SELINUX_IGNORE_NEVERALLOWS=true
+export TZ=Asia/Dhaka
+#export SELINUX_IGNORE_NEVERALLOWS=true
 
 compile_plox () {
-mka derp -j17
+./r* phone1 -v beta -s certs -t user -z
+ls /tmp/rom/aospa*.zip && mv -f /tmp/rom/aospa*.zip /tmp/rom/out/target/product/phone1
 }
