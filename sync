@@ -22,6 +22,8 @@ git clone https://github.com/AOSPA-Lavender/manifest.git --depth 1 .repo/local_m
 # Sync source without unnecessary messages, try with -j30 first, if fails, it will try again
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j10 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j10
 
+git clone --depth=1 https://github.com/AOSPA-lavender/android_packages_apps_Settings packages/apps/Settings -b topaz-qpr2
+
 . /tmp/ci/function
 tg "$rom_name source sync completed!
 Total Size: $(du -sh /tmp/rom | cut -d - -f 1 | cut -d / -f 1)
